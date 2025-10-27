@@ -63,3 +63,12 @@ C:\Users\cbalbach\.codex\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\refint\BLE.Tool
 C:\Users\cbalbach\.codex\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.pdb
 C:\Users\cbalbach\.codex\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.genruntimeconfig.cache
 C:\Users\cbalbach\.codex\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\ref\BLE.Tools.Seed.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.csproj.AssemblyReference.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.GeneratedMSBuildEditorConfig.editorconfig
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.AssemblyInfoInputs.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.AssemblyInfo.cs
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.csproj.CoreCompileInputs.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.sourcelink.json
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\refint\BLE.Tools.Seed.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Tools.Seed\obj\Debug\net8.0\BLE.Tools.Seed.pdb

@@ -4,6 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UseAppHost>false</UseAppHost>  <!-- erzeugt keine EXE => kein AppHost-Lock -->
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\BLE.Data\BLE.Data.csproj" />

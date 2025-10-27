@@ -15,3 +15,21 @@ C:\Users\cbalbach\.codex\BLE\src\BLE.Data\obj\Debug\net8.0\refint\BLE.Data.dll
 C:\Users\cbalbach\.codex\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.pdb
 C:\Users\cbalbach\.codex\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.genruntimeconfig.cache
 C:\Users\cbalbach\.codex\BLE\src\BLE.Data\obj\Debug\net8.0\ref\BLE.Data.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.deps.json
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.runtimeconfig.json
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.pdb
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Domain.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Domain.pdb
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.AssemblyReference.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.GeneratedMSBuildEditorConfig.editorconfig
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.AssemblyInfoInputs.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.AssemblyInfo.cs
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.CoreCompileInputs.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.sourcelink.json
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.Up2Date
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\refint\BLE.Data.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.pdb
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.genruntimeconfig.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\ref\BLE.Data.dll

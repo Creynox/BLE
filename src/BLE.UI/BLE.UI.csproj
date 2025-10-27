@@ -1,25 +1,39 @@
 <Project Sdk="Microsoft.NET.Sdk">
-    <PropertyGroup>
-    <!-- schon vorhanden -->
-    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+
+  <PropertyGroup>
+    <!-- MAUI aktivieren -->
     <UseMaui>true</UseMaui>
     <SingleProject>true</SingleProject>
-    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
-    <WindowsPackageType>None</WindowsPackageType>
+    <TargetFrameworks>net8.0-windows10.0.19041.0</TargetFrameworks>
+    <OutputType>WinExe</OutputType>
 
-    <!-- HART ausschalten, falls etwas es wieder anschaltet -->
+    <!-- Keine Appx-Verpackung (kein AppxManifest nötig) -->
+    <WindowsPackageType>None</WindowsPackageType>
     <GenerateAppxPackageOnBuild>false</GenerateAppxPackageOnBuild>
     <EnablePreviewMsixTooling>false</EnablePreviewMsixTooling>
 
-    <!-- Optional: Warnung MA002 ruhigstellen (weil wir Controls explizit referenzieren) -->
+    <!-- Warnungen deaktivieren, weil wir explizit Controls nutzen -->
     <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
+
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <!-- MAUI Controls -->
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
+    
+    <!-- EF Core wie in BLE.Data -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    
+    <!-- Dependency Injection, wie von MAUI gefordert -->
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
 
   <ItemGroup>
-    <!-- NET 8 verlangt die explizite Controls-Referenz -->
-    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
-    <!-- Falls nicht genutzt, gern entfernen -->
-    <!-- <PackageReference Include="CommunityToolkit.Maui" Version="8.0.0" /> -->
+    <!-- Verweise auf interne Projekte -->
+    <ProjectReference Include="..\BLE.Data\BLE.Data.csproj" />
+    <ProjectReference Include="..\BLE.Services\BLE.Services.csproj" />
   </ItemGroup>
+
 </Project>

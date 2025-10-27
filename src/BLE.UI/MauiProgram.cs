@@ -1,7 +1,16 @@
+// Einfügen in src/BLE.UI/MauiProgram.cs – ganz oben
+using System;
+using System.Threading.Tasks;
+
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+
 using BLE.Data;
+using BLE.Services;
+
+
 using BLE.Services.Etl;
 using BLE.Services.Reporting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui;
 using Microsoft.Maui.Controls.Hosting;
