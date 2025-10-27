@@ -1,0 +1,11 @@
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.deps.json
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.dll
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.pdb
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.AssemblyInfoInputs.cache
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.AssemblyInfo.cs
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.csproj.CoreCompileInputs.cache
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.dll
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\refint\BLE.Domain.dll
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.pdb
+C:\Users\cbalbach\.codex\BLE\src\BLE.Domain\obj\Debug\net8.0\ref\BLE.Domain.dll

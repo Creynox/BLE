@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLE.UI.Views.DashboardPage"
+             Title="Dashboard">
+    <ScrollView>
+    <VerticalStackLayout Padding="24" Spacing="12">
+        <Label Text="Dashboard" FontSize="22" FontAttributes="Bold" />
+        <HorizontalStackLayout Spacing="8">
+            <Entry x:Name="_filePath" Placeholder="Excel-Datei Pfad (Vordruck-2025.xls)" HorizontalOptions="FillAndExpand" />
+            <Button Text="Import" Clicked="OnImportClicked" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Spacing="8">
+            <Entry x:Name="_probencode" Placeholder="Probencode für PDF" />
+            <Button Text="PDF Export" Clicked="OnExportPdfClicked" />
+        </HorizontalStackLayout>
+        <Label x:Name="_status" TextColor="Green" />
+        <CollectionView x:Name="_imports" HeightRequest="300">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal" Spacing="12">
+                        <Label Text="{Binding ImportedAt}"/>
+                        <Label Text="{Binding Filename}"/>
+                        <Label Text="{Binding Status}"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,25 @@
+{
+  "sheet_patterns": ["STS", "HST", "TS"],
+  "header_row_hint": 1,
+  "required_fields": ["Probencode", "Werk", "Produkt"],
+  "columns": {
+    "Probencode": { "target": "probe.probencode", "type": "string", "required": true, "trim": true },
+    "Werk":       { "target": "probe.werk", "type": "string" },
+    "Produkt":    { "target": "probe.produkt", "type": "string" },
+    "Datum":      { "target": "probe.entnahmedatum", "type": "date", "formats": ["dd.MM.yyyy","dd.MM.yy"] },
+    "Feuchte %":  { "target": "probe.feuchte", "type": "number", "unit": "%", "decimal": "," },
+    "Mergel %":   { "target": "messung[mergel].ist_wert", "type": "number", "unit": "%", "decimal": "," },
+    "<0,063 %":   { "target": "messung[lt0063].ist_wert", "type": "number", "unit": "%", "decimal": "," }
+  },
+  "fraction_table": {
+    "start_after_header": true,
+    "columns": {
+      "Korngröße_min_mm": { "source": "Korngröße (von)", "type": "number", "decimal": "," },
+      "Korngröße_max_mm": { "source": "Korngröße (bis)",  "type": "number", "decimal": "," },
+      "Masse_g":          { "source": "Masse g",          "type": "number" },
+      "Anteil_%":         { "source": "Anteil M-%",       "type": "number", "decimal": "," },
+      "Durchgang_%":      { "source": "Durchgang M-%",    "type": "number", "decimal": "," }
+    },
+    "stop_when_empty_rows": 3
+  }
+}

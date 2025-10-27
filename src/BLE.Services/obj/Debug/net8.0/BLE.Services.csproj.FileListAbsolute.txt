@@ -1,0 +1,5 @@
+C:\Users\cbalbach\.codex\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.csproj.AssemblyReference.cache
+C:\Users\cbalbach\.codex\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cbalbach\.codex\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.AssemblyInfoInputs.cache
+C:\Users\cbalbach\.codex\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.AssemblyInfo.cs
+C:\Users\cbalbach\.codex\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.csproj.CoreCompileInputs.cache

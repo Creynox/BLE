@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BLE.UI.Views.LoginPage"
+             Title="Login">
+    <VerticalStackLayout Padding="24" Spacing="12">
+        <Label Text="BLE Labor - Anmeldung" FontSize="22" FontAttributes="Bold" />
+        <Entry x:Name="_userEntry" Placeholder="Benutzername" />
+        <Entry x:Name="_passEntry" Placeholder="Passwort" IsPassword="True" />
+        <Button Text="Anmelden" Clicked="OnLoginClicked" />
+        <Label x:Name="_status" TextColor="Red" />
+    </VerticalStackLayout>
+</ContentPage>

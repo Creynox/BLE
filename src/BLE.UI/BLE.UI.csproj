@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+    <!-- schon vorhanden -->
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <SupportedOSPlatformVersion>10.0.19041.0</SupportedOSPlatformVersion>
+    <WindowsPackageType>None</WindowsPackageType>
+
+    <!-- HART ausschalten, falls etwas es wieder anschaltet -->
+    <GenerateAppxPackageOnBuild>false</GenerateAppxPackageOnBuild>
+    <EnablePreviewMsixTooling>false</EnablePreviewMsixTooling>
+
+    <!-- Optional: Warnung MA002 ruhigstellen (weil wir Controls explizit referenzieren) -->
+    <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <!-- NET 8 verlangt die explizite Controls-Referenz -->
+    <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
+    <!-- Falls nicht genutzt, gern entfernen -->
+    <!-- <PackageReference Include="CommunityToolkit.Maui" Version="8.0.0" /> -->
+  </ItemGroup>
+</Project>

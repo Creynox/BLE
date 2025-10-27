@@ -1,0 +1,6 @@
+{
+  "%": ["%", "Prozent", "M-%"],
+  "g": ["g", "gramm"],
+  "mm": ["mm", "Millimeter"],
+  "°C": ["°C", "C", "GradC"]
+}

@@ -1,0 +1,10 @@
+{
+  "sheet_patterns": ["MERK", "MERKMAL"],
+  "header_row_hint": 1,
+  "required_fields": ["Probencode"],
+  "columns": {
+    "Probencode": { "target": "probe.probencode", "type": "string", "required": true, "trim": true },
+    "Mergel %":   { "target": "messung[mergel].ist_wert", "type": "number", "unit": "%", "decimal": "," },
+    "<0,063 %":   { "target": "messung[lt0063].ist_wert", "type": "number", "unit": "%", "decimal": "," }
+  }
+}

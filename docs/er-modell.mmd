@@ -1,0 +1,21 @@
+erDiagram
+  NORMWERK ||--o{ PRUEFVERFAHREN : has
+  PRUEFVERFAHREN ||--o{ GRENZWERT : defines
+  PRUEFVERFAHREN ||--o{ FORMEL : computes
+  KUNDE ||--o{ PROJEKT : has
+  PROJEKT ||--o{ PROBE : has
+  PROBE ||--o{ MESSUNG : has
+  PROBE ||--o{ KORNFRAKTION : has
+  ETLFILE ||--o{ ETLLOG : logs
+
+  NORMWERK { UUID id PK }
+  PRUEFVERFAHREN { UUID id PK }
+  GRENZWERT { UUID id PK }
+  FORMEL { UUID id PK }
+  KUNDE { UUID id PK }
+  PROJEKT { UUID id PK }
+  PROBE { UUID id PK }
+  MESSUNG { UUID id PK }
+  KORNFRAKTION { UUID id PK }
+  ETLFILE { UUID id PK }
+  ETLLOG { UUID id PK }

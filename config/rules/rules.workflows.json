@@ -1,0 +1,14 @@
+[
+  {
+    "WorkflowName": "BLE_Siebanalyse_Basics",
+    "Rules": [
+      { "RuleName": "Feuchte_ok",   "Expression": "input.Feuchte <= 1.5" },
+      { "RuleName": "Feuchte_warn", "Expression": "input.Feuchte > 1.5 && input.Feuchte <= 2.0" },
+      { "RuleName": "Feuchte_fail", "Expression": "input.Feuchte > 2.0" },
+
+      { "RuleName": "Mergel_ok",    "Expression": "input.Mergel <= 0.6" },
+      { "RuleName": "Mergel_warn",  "Expression": "input.Mergel > 0.6 && input.Mergel <= 0.8" },
+      { "RuleName": "Mergel_fail",  "Expression": "input.Mergel > 0.8" }
+    ]
+  }
+]

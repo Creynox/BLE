@@ -1,0 +1,57 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Domain", "src/BLE.Domain/BLE.Domain.csproj", "{BE2E0E80-2C9B-45F1-8A5C-7F9FC2C0F0A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Data", "src/BLE.Data/BLE.Data.csproj", "{E9A3E1F3-1EAB-4F2C-B884-6B4F4D3B85F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Services", "src/BLE.Services/BLE.Services.csproj", "{59A4D2C0-6694-4F4B-9B9A-0C4AB0D343F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.UI", "src/BLE.UI/BLE.UI.csproj", "{B3D6B6C4-7BDE-49A9-9806-7B8B61FD9C2E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Tests.Unit", "tests/BLE.Tests.Unit/BLE.Tests.Unit.csproj", "{A3A9A4A7-6D7F-4B42-9A3E-6D7B6E2E8B1A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Tests.Integration", "tests/BLE.Tests.Integration/BLE.Tests.Integration.csproj", "{D9F1C3A2-1E3B-4D8F-97A0-8B3E2B2F8E77}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLE.Tools.Seed", "src/BLE.Tools.Seed/BLE.Tools.Seed.csproj", "{C2E0F2D8-1F02-4D3C-8C63-1E0E9B8E5C7B}"
+EndProject
+Global
+    GlobalSection(SolutionConfigurationPlatforms) = preSolution
+        Debug|Any CPU = Debug|Any CPU
+        Release|Any CPU = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(ProjectConfigurationPlatforms) = postSolution
+        {BE2E0E80-2C9B-45F1-8A5C-7F9FC2C0F0A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {BE2E0E80-2C9B-45F1-8A5C-7F9FC2C0F0A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {BE2E0E80-2C9B-45F1-8A5C-7F9FC2C0F0A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {BE2E0E80-2C9B-45F1-8A5C-7F9FC2C0F0A1}.Release|Any CPU.Build.0 = Release|Any CPU
+        {E9A3E1F3-1EAB-4F2C-B884-6B4F4D3B85F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {E9A3E1F3-1EAB-4F2C-B884-6B4F4D3B85F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {E9A3E1F3-1EAB-4F2C-B884-6B4F4D3B85F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {E9A3E1F3-1EAB-4F2C-B884-6B4F4D3B85F4}.Release|Any CPU.Build.0 = Release|Any CPU
+        {59A4D2C0-6694-4F4B-9B9A-0C4AB0D343F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {59A4D2C0-6694-4F4B-9B9A-0C4AB0D343F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {59A4D2C0-6694-4F4B-9B9A-0C4AB0D343F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {59A4D2C0-6694-4F4B-9B9A-0C4AB0D343F8}.Release|Any CPU.Build.0 = Release|Any CPU
+        {B3D6B6C4-7BDE-49A9-9806-7B8B61FD9C2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {B3D6B6C4-7BDE-49A9-9806-7B8B61FD9C2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {B3D6B6C4-7BDE-49A9-9806-7B8B61FD9C2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {B3D6B6C4-7BDE-49A9-9806-7B8B61FD9C2E}.Release|Any CPU.Build.0 = Release|Any CPU
+        {A3A9A4A7-6D7F-4B42-9A3E-6D7B6E2E8B1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {A3A9A4A7-6D7F-4B42-9A3E-6D7B6E2E8B1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {A3A9A4A7-6D7F-4B42-9A3E-6D7B6E2E8B1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {A3A9A4A7-6D7F-4B42-9A3E-6D7B6E2E8B1A}.Release|Any CPU.Build.0 = Release|Any CPU
+        {D9F1C3A2-1E3B-4D8F-97A0-8B3E2B2F8E77}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {D9F1C3A2-1E3B-4D8F-97A0-8B3E2B2F8E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {D9F1C3A2-1E3B-4D8F-97A0-8B3E2B2F8E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {D9F1C3A2-1E3B-4D8F-97A0-8B3E2B2F8E77}.Release|Any CPU.Build.0 = Release|Any CPU
+        {C2E0F2D8-1F02-4D3C-8C63-1E0E9B8E5C7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+        {C2E0F2D8-1F02-4D3C-8C63-1E0E9B8E5C7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+        {C2E0F2D8-1F02-4D3C-8C63-1E0E9B8E5C7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+        {C2E0F2D8-1F02-4D3C-8C63-1E0E9B8E5C7B}.Release|Any CPU.Build.0 = Release|Any CPU
+    EndGlobalSection
+    GlobalSection(SolutionProperties) = preSolution
+        HideSolutionNode = FALSE
+    EndGlobalSection
+EndGlobal
