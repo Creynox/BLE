@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eQINo3Sb2qU=",
+  "dgSpecHash": "jL4B5T6xVXw=",
   "success": true,
   "projectFilePath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\tests\\BLE.Tests.Unit\\BLE.Tests.Unit.csproj",
   "expectedPackageFiles": [
@@ -73,16 +73,5 @@
     "C:\\Users\\cbalbach\\.nuget\\packages\\xunit.extensibility.execution\\2.7.0\\xunit.extensibility.execution.2.7.0.nupkg.sha512",
     "C:\\Users\\cbalbach\\.nuget\\packages\\xunit.runner.visualstudio\\2.5.7\\xunit.runner.visualstudio.2.5.7.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BLE.Data depends on Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3) but Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 was not found. An approximate best match of Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4 was resolved.",
-      "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  "logs": []
 }

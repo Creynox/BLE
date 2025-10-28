@@ -25,7 +25,8 @@
     
     <!-- EF Core wie in BLE.Data -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
-    
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />
+
     <!-- Dependency Injection, wie von MAUI gefordert -->
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
   </ItemGroup>

@@ -1,8 +1,7 @@
 using System;
-using System.Threading.Tasks;
 using BLE.Data;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui.Controls;
 
 namespace BLE.UI.Views;
@@ -15,27 +14,6 @@ public partial class LoginPage : ContentPage
     {
         InitializeComponent();
         _sp = sp;
-    }
-
-    protected override async void OnAppearing()
-    {
-        base.OnAppearing();
-        // Admin-Seed (einfach belassen, aber optional in Startup verschieben)
-        using var scope = _sp.CreateScope();
-        var db = scope.ServiceProvider.GetRequiredService<BLEDbContext>();
-        if (!await db.Users.AnyAsync())
-        {
-            var user = new ApplicationUser {
-                Id = Guid.NewGuid(),
-                UserName = "admin",
-                NormalizedUserName = "ADMIN",
-                DisplayName = "Administrator"
-            };
-            var hasher = new Microsoft.AspNetCore.Identity.PasswordHasher<ApplicationUser>();
-            user.PasswordHash = hasher.HashPassword(user, "admin123!");
-            db.Users.Add(user);
-            await db.SaveChangesAsync();
-        }
     }
 
     private async void OnLoginClicked(object sender, EventArgs e)
@@ -61,7 +39,7 @@ public partial class LoginPage : ContentPage
             return;
         }
 
-        // ⬇️ Seite über DI auflösen (statt new DashboardPage(_sp))
+        // Resolve dashboard via DI (statt new DashboardPage(_sp))
         var dashboard = scope.ServiceProvider.GetRequiredService<DashboardPage>();
         await Navigation.PushAsync(dashboard);
     }

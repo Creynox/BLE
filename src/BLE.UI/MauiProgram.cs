@@ -1,8 +1,15 @@
+using System;
+using System.IO;
+using System.Linq;
+using BLE.Data;
+using BLE.Services.Etl;
+using BLE.Services.Reporting;
+using BLE.UI.Views;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui;
 using Microsoft.Maui.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using BLE.UI.Views;
-// using Microsoft.EntityFrameworkCore; // falls du den DbContext hier konfigurierst
 
 namespace BLE.UI;
 
@@ -20,14 +27,40 @@ public static class MauiProgram
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
             });
 
-        // DbContext ggf. hier (oder an der Stelle, wo du es schon hast)
-        // builder.Services.AddDbContext<BLE.Data.BLEDbContext>(opt =>
-        //     opt.UseNpgsql(Configuration.GetConnectionString("Postgres")));
+        var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ble.db");
+        builder.Services.AddDbContext<BLEDbContext>(options =>
+            options.UseSqlite($"Data Source={dbPath}"));
 
-        // Seiten registrieren
-        builder.Services.AddSingleton<LoginPage>();
-        builder.Services.AddSingleton<DashboardPage>(); // ⬅️ wird oben per DI resolved
+        builder.Services.AddScoped<EtlService>();
+        builder.Services.AddScoped<PdfService>();
 
-        return builder.Build();
+        builder.Services.AddTransient<LoginPage>();
+        builder.Services.AddTransient<DashboardPage>();
+
+        var app = builder.Build();
+
+        using (var scope = app.Services.CreateScope())
+        {
+            var db = scope.ServiceProvider.GetRequiredService<BLEDbContext>();
+            db.Database.EnsureCreated();
+
+            if (!db.Users.Any())
+            {
+                var user = new ApplicationUser
+                {
+                    Id = Guid.NewGuid(),
+                    UserName = "admin",
+                    NormalizedUserName = "ADMIN",
+                    DisplayName = "Administrator"
+                };
+
+                var hasher = new PasswordHasher<ApplicationUser>();
+                user.PasswordHash = hasher.HashPassword(user, "admin123!");
+                db.Users.Add(user);
+                db.SaveChanges();
+            }
+        }
+
+        return app;
     }
 }

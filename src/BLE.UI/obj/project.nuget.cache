@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "nxUW8dBbqGw=",
+  "dgSpecHash": "YbYhwl4X+q8=",
   "success": true,
   "projectFilePath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
   "expectedPackageFiles": [
@@ -89,17 +89,5 @@
     "C:\\Users\\cbalbach\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\cbalbach\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.56\\microsoft.windows.sdk.net.ref.10.0.19041.56.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1603",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "BLE.Data depends on Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3) but Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 was not found. An approximate best match of Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4 was resolved.",
-      "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
-      "targetGraphs": [
-        "net8.0-windows10.0.19041",
-        "net8.0-windows10.0.19041/win10-x64"
-      ]
-    }
-  ]
+  "logs": []
 }

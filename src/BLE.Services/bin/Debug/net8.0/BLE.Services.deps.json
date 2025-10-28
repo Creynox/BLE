@@ -12,6 +12,7 @@
           "BLE.Domain": "1.0.0",
           "ExcelDataReader": "3.6.0",
           "ExcelDataReader.DataSet": "3.6.0",
+          "Npgsql.EntityFrameworkCore.PostgreSQL": "8.0.4",
           "QuestPDF": "2024.3.0",
           "RulesEngine": "5.0.0"
         },
