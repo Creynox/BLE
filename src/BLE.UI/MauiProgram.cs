@@ -1,20 +1,8 @@
-// Einfügen in src/BLE.UI/MauiProgram.cs – ganz oben
-using System;
-using System.Threading.Tasks;
-
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-
-using BLE.Data;
-using BLE.Services;
-
-
-using BLE.Services.Etl;
-using BLE.Services.Reporting;
-using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Maui;
-using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
+using Microsoft.Extensions.DependencyInjection;
+using BLE.UI.Views;
+// using Microsoft.EntityFrameworkCore; // falls du den DbContext hier konfigurierst
 
 namespace BLE.UI;
 
@@ -23,22 +11,23 @@ public static class MauiProgram
     public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();
+
         builder
-            .UseMauiApp<App>();
+            .UseMauiApp<App>()
+            .ConfigureFonts(fonts =>
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            });
 
-        var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "ble.db");
-        builder.Services.AddDbContext<BLEDbContext>(opt => opt.UseSqlite($"Data Source={dbPath}"));
-        builder.Services.AddScoped<EtlService>();
-        builder.Services.AddScoped<PdfService>();
+        // DbContext ggf. hier (oder an der Stelle, wo du es schon hast)
+        // builder.Services.AddDbContext<BLE.Data.BLEDbContext>(opt =>
+        //     opt.UseNpgsql(Configuration.GetConnectionString("Postgres")));
 
-        // Apply EF migrations on startup
-        using (var scope = builder.Services.BuildServiceProvider().CreateScope())
-        {
-            var db = scope.ServiceProvider.GetRequiredService<BLEDbContext>();
-            db.Database.Migrate();
-        }
+        // Seiten registrieren
+        builder.Services.AddSingleton<LoginPage>();
+        builder.Services.AddSingleton<DashboardPage>(); // ⬅️ wird oben per DI resolved
 
         return builder.Build();
     }
 }
-

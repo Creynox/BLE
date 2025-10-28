@@ -1,4 +1,11 @@
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.csproj.AssemblyReference.cache
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.GeneratedMSBuildEditorConfig.editorconfig
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.inputs
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.inputs
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauisplash.inputs
@@ -6,8 +13,18 @@ H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauifont.stamp
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.stamp
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\mauiimage.outputs
-H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.GeneratedMSBuildEditorConfig.editorconfig
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.AssemblyInfoInputs.cache
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.AssemblyInfo.cs
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.csproj.CoreCompileInputs.cache
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.sourcelink.json
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\refint\BLE.UI.dll
+H:\Meine Ablage\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.pdb
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.csproj.AssemblyReference.cache
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.i.cs
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.g.cs
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlTypeInfo.g.cs
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xaml
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\Platforms\Windows\App.xbf
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\XamlSaveStateFile.xml
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\obj\Debug\net8.0-windows10.0.19041.0\win10-x64\BLE.UI.GeneratedMSBuildEditorConfig.editorconfig

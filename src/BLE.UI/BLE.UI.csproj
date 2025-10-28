@@ -1,5 +1,5 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+<!-- hallo GPT -->
   <PropertyGroup>
     <!-- MAUI aktivieren -->
     <UseMaui>true</UseMaui>
@@ -35,5 +35,16 @@
     <ProjectReference Include="..\BLE.Data\BLE.Data.csproj" />
     <ProjectReference Include="..\BLE.Services\BLE.Services.csproj" />
   </ItemGroup>
+
+  <!-- Sicherstellen, dass Windows App.xaml als Page kompiliert wird (InitializeComponent-Generierung) -->
+  <ItemGroup>
+    <Page Update="Platforms\Windows\App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+    <PropertyGroup Condition="'$(Configuration)'=='Debug'">
+    <AssemblyName>BLE.UI.Debug</AssemblyName>
+  </PropertyGroup>
+
 
 </Project>

@@ -3134,11 +3134,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
+      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
       "projectName": "BLE.Services",
-      "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
+      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
       "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-      "outputPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Services\\obj\\",
+      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3154,11 +3154,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-              "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
             },
-            "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
-              "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
             }
           }
         }

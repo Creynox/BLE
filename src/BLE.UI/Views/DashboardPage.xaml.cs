@@ -8,6 +8,10 @@ using BLE.Services.Etl;
 using BLE.Services.Reporting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Maui.Controls;
+using Microsoft.Extensions.DependencyInjection;
+using System.IO;
+using System.Linq;
+using Microsoft.Maui.Graphics;
 
 namespace BLE.UI.Views;
 
@@ -77,4 +81,3 @@ public partial class DashboardPage : ContentPage
         _status.Text = $"PDF gespeichert: {file}";
     }
 }
-

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLE.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6bfe553cf06b188528beb4efc44673d6d1a9d413")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1fb95670a13b5175676f72fbe20ec00e513dd9c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLE.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLE.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

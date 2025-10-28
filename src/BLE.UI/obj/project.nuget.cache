@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PhHB/B5rUvk=",
+  "dgSpecHash": "nxUW8dBbqGw=",
   "success": true,
-  "projectFilePath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+  "projectFilePath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\cbalbach\\.nuget\\packages\\exceldatareader\\3.6.0\\exceldatareader.3.6.0.nupkg.sha512",
     "C:\\Users\\cbalbach\\.nuget\\packages\\exceldatareader.dataset\\3.6.0\\exceldatareader.dataset.3.6.0.nupkg.sha512",
@@ -94,7 +94,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "\"BLE.Data\" ist von \"Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3)\" abhängig, \"Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3\" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von \"Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4\" wurde aufgelöst.",
+      "message": "BLE.Data depends on Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3) but Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 was not found. An approximate best match of Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4 was resolved.",
       "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
       "targetGraphs": [
         "net8.0-windows10.0.19041",

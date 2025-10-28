@@ -21,3 +21,21 @@ H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.d
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\refint\BLE.Services.dll
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.pdb
 H:\Meine Ablage\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\ref\BLE.Services.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Services.deps.json
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Services.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Services.pdb
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Data.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Domain.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Domain.pdb
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\bin\Debug\net8.0\BLE.Data.pdb
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.csproj.AssemblyReference.cache
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.AssemblyInfoInputs.cache
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.AssemblyInfo.cs
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.csproj.CoreCompileInputs.cache
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.sourcelink.json
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Serv.D4724B57.Up2Date
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\refint\BLE.Services.dll
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\BLE.Services.pdb
+C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Services\obj\Debug\net8.0\ref\BLE.Services.dll

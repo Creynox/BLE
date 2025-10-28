@@ -1,18 +1,13 @@
-
-using System;
-using Microsoft.Extensions.DependencyInjection;
-
-using Microsoft.Maui;
 using Microsoft.Maui.Controls;
+using BLE.UI.Views;
 
 namespace BLE.UI;
 
 public partial class App : Application
 {
-    public App(IServiceProvider sp)
+    public App(LoginPage loginPage)
     {
         InitializeComponent();
-        MainPage = new NavigationPage(new Views.LoginPage(sp));
+        MainPage = new NavigationPage(loginPage);
     }
 }
-

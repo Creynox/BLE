@@ -7206,11 +7206,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
-      "projectName": "BLE.UI",
-      "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "projectName": "BLE.UI.Debug",
+      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
       "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-      "outputPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.UI\\obj\\",
+      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
@@ -7227,11 +7227,11 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-              "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
             },
-            "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
-              "projectPath": "H:\\Meine Ablage\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
             }
           }
         }
@@ -7307,7 +7307,7 @@
       "code": "NU1603",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "\"BLE.Data\" ist von \"Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3)\" abhängig, \"Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3\" wurde jedoch nicht gefunden. Die ungefähre höchste Übereinstimmung von \"Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4\" wurde aufgelöst.",
+      "message": "BLE.Data depends on Npgsql.EntityFrameworkCore.PostgreSQL (>= 8.0.3) but Npgsql.EntityFrameworkCore.PostgreSQL 8.0.3 was not found. An approximate best match of Npgsql.EntityFrameworkCore.PostgreSQL 8.0.4 was resolved.",
       "libraryId": "Npgsql.EntityFrameworkCore.PostgreSQL",
       "targetGraphs": [
         "net8.0-windows10.0.19041",

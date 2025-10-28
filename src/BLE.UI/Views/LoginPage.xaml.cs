@@ -1,10 +1,7 @@
 using System;
 using System.Threading.Tasks;
-
 using BLE.Data;
-using BLE.Services;
-
-
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Maui.Controls;
 
@@ -23,12 +20,17 @@ public partial class LoginPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
-        // Ensure admin user exists (seed)
+        // Admin-Seed (einfach belassen, aber optional in Startup verschieben)
         using var scope = _sp.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<BLEDbContext>();
         if (!await db.Users.AnyAsync())
         {
-            var user = new ApplicationUser { Id = Guid.NewGuid(), UserName = "admin", NormalizedUserName = "ADMIN", DisplayName = "Administrator" };
+            var user = new ApplicationUser {
+                Id = Guid.NewGuid(),
+                UserName = "admin",
+                NormalizedUserName = "ADMIN",
+                DisplayName = "Administrator"
+            };
             var hasher = new Microsoft.AspNetCore.Identity.PasswordHasher<ApplicationUser>();
             user.PasswordHash = hasher.HashPassword(user, "admin123!");
             db.Users.Add(user);
@@ -43,12 +45,14 @@ public partial class LoginPage : ContentPage
 
         using var scope = _sp.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<BLEDbContext>();
+
         var user = await db.Users.FirstOrDefaultAsync(u => u.UserName == username);
         if (user == null)
         {
             _status.Text = "Benutzer nicht gefunden";
             return;
         }
+
         var hasher = new Microsoft.AspNetCore.Identity.PasswordHasher<ApplicationUser>();
         var result = hasher.VerifyHashedPassword(user, user.PasswordHash!, password);
         if (result == Microsoft.AspNetCore.Identity.PasswordVerificationResult.Failed)
@@ -57,7 +61,8 @@ public partial class LoginPage : ContentPage
             return;
         }
 
-        await Navigation.PushAsync(new DashboardPage(_sp));
+        // ⬇️ Seite über DI auflösen (statt new DashboardPage(_sp))
+        var dashboard = scope.ServiceProvider.GetRequiredService<DashboardPage>();
+        await Navigation.PushAsync(dashboard);
     }
 }
-
