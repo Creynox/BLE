@@ -1,15 +1,53 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage
+<?xml version="1.0" encoding="utf-8"?>
+<uranium:UraniumContentPage
     x:Class="BLE.UI.Views.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    Title="Login">
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:viewModels="clr-namespace:BLE.UI.ViewModels"
+    x:DataType="viewModels:LoginViewModel"
+    Title="{Binding Title}">
 
-    <VerticalStackLayout Padding="24" Spacing="12">
-        <Label Text="BLE Login" FontSize="24" HorizontalOptions="Center" />
-        <Entry x:Name="_userEntry" Placeholder="Benutzername" />
-        <Entry x:Name="_passEntry" Placeholder="Passwort" IsPassword="True" />
-        <Button Text="Anmelden" Clicked="OnLoginClicked" />
-        <Label x:Name="_status" TextColor="Red" />
-    </VerticalStackLayout>
-</ContentPage>
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="24"
+            Padding="24"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            WidthRequest="420">
+
+            <Image
+                Source="dotnet_bot.svg"
+                HeightRequest="120"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="BLE Anmeldung"
+                FontSize="32"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" />
+
+            <material:TextField
+                Title="Benutzername"
+                Text="{Binding Username}"
+                ReturnType="Next" />
+
+            <material:TextField
+                Title="Passwort"
+                Text="{Binding Password}"
+                IsPassword="True"
+                ReturnType="Done" />
+
+            <ActivityIndicator
+                IsVisible="{Binding IsBusy}"
+                IsRunning="{Binding IsBusy}"
+                HorizontalOptions="Center" />
+
+            <Button
+                Text="Anmelden"
+                StyleClass="FilledButton"
+                Command="{Binding LoginCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</uranium:UraniumContentPage>

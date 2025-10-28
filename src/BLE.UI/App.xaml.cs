@@ -1,13 +1,12 @@
 using Microsoft.Maui.Controls;
-using BLE.UI.Views;
 
 namespace BLE.UI;
 
 public partial class App : Application
 {
-    public App(LoginPage loginPage)
+    public App(AppShell shell)
     {
         InitializeComponent();
-        MainPage = new NavigationPage(loginPage);
+        MainPage = shell;
     }
 }

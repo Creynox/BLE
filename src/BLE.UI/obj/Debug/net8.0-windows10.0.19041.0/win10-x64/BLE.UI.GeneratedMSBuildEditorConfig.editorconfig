@@ -8,7 +8,7 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BLE.UI
-build_property.ProjectDir = C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.UI\
+build_property.ProjectDir = C:\Users\jcrey\VSCode\BLE\src\BLE.UI\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTAotOptimizerEnabled = true
@@ -19,20 +19,56 @@ build_property.CsWinRTCcwLookupTableGeneratorEnabled = true
 build_property.CsWinRTMergeReferencedActivationFactories = 
 build_property.CsWinRTAotWarningLevel = 
 
-[C:/Users/cbalbach/.codex/BLE Projekt/BLE/src/BLE.UI/App.xaml]
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[C:/Users/cbalbach/.codex/BLE Projekt/BLE/src/BLE.UI/Views/DashboardPage.xaml]
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/AppShell.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.AppShell.xaml
+build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
+build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Themes/Colors.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Themes.Colors.xaml
+build_metadata.AdditionalFiles.TargetPath = Themes\Colors.xaml
+build_metadata.AdditionalFiles.RelativePath = Themes\Colors.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Themes/Styles.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Themes.Styles.xaml
+build_metadata.AdditionalFiles.TargetPath = Themes\Styles.xaml
+build_metadata.AdditionalFiles.RelativePath = Themes\Styles.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Views/DashboardPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.DashboardPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\DashboardPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\DashboardPage.xaml
 
-[C:/Users/cbalbach/.codex/BLE Projekt/BLE/src/BLE.UI/Views/LoginPage.xaml]
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Views/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\LoginPage.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Views/NewProbePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.NewProbePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\NewProbePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\NewProbePage.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Views/ProbenPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.ProbenPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\ProbenPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\ProbenPage.xaml
+
+[C:/Users/jcrey/VSCode/BLE/src/BLE.UI/Views/SettingsPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.SettingsPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\SettingsPage.xaml

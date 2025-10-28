@@ -20,9 +20,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#52D681" />
+    <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#52D681" BaseSize="128,128" />
+    <MauiImage Include="Resources\Images\*" />
+    <MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
+    <MauiFont Include="Resources\Fonts\*" />
+    <MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <ItemGroup>
     <!-- MAUI Controls -->
     <PackageReference Include="Microsoft.Maui.Controls" Version="8.0.100" />
-    
+    <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
+
+    <!-- Uranium UI -->
+    <PackageReference Include="UraniumUI.Material" Version="2.11.0" />
+
     <!-- EF Core wie in BLE.Data -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.8" />

@@ -51,3 +51,21 @@ C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\refint\BL
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.pdb
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.genruntimeconfig.cache
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Data\obj\Debug\net8.0\ref\BLE.Data.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.deps.json
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.runtimeconfig.json
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Data.pdb
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Domain.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\bin\Debug\net8.0\BLE.Domain.pdb
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.AssemblyReference.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.AssemblyInfoInputs.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.AssemblyInfo.cs
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.CoreCompileInputs.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.sourcelink.json
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.csproj.Up2Date
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\refint\BLE.Data.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.pdb
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\BLE.Data.genruntimeconfig.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Data\obj\Debug\net8.0\ref\BLE.Data.dll

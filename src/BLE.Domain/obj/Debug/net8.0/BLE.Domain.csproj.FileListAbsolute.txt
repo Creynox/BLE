@@ -33,3 +33,15 @@ C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Dom
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Domain\obj\Debug\net8.0\refint\BLE.Domain.dll
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.pdb
 C:\Users\cbalbach\.codex\BLE Projekt\BLE\src\BLE.Domain\obj\Debug\net8.0\ref\BLE.Domain.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.deps.json
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\bin\Debug\net8.0\BLE.Domain.pdb
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.AssemblyInfoInputs.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.AssemblyInfo.cs
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.sourcelink.json
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\refint\BLE.Domain.dll
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\BLE.Domain.pdb
+C:\Users\jcrey\VSCode\BLE\src\BLE.Domain\obj\Debug\net8.0\ref\BLE.Domain.dll

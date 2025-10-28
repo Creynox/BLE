@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uranium:UraniumContentPage
+    x:Class="BLE.UI.Views.ProbenPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:viewModels="clr-namespace:BLE.UI.ViewModels"
+    x:DataType="viewModels:ProbenViewModel"
+    Title="{Binding Title}">
+
+    <RefreshView Command="{Binding LoadCommand}" IsRefreshing="{Binding IsBusy}">
+        <CollectionView
+            ItemsSource="{Binding Proben}"
+            SelectionMode="None"
+            Margin="16">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="viewModels:ProbeListItem">
+                    <Frame Padding="16" Margin="0,6" CornerRadius="12" HasShadow="False">
+                        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+                            <Label
+                                Grid.Row="0"
+                                Grid.ColumnSpan="2"
+                                Text="{Binding Code}"
+                                FontAttributes="Bold"
+                                FontSize="18" />
+                            <Label
+                                Grid.Row="1"
+                                Text="{Binding Material}"
+                                FontSize="12"
+                                TextColor="{AppThemeBinding Light={StaticResource Gray500}, Dark={StaticResource Gray300}}" />
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                Text="{Binding Date, StringFormat='{}{0:dd.MM.yyyy}'}"
+                                FontSize="12"
+                                HorizontalTextAlignment="End" />
+                        </Grid>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</uranium:UraniumContentPage>

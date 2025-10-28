@@ -57,6 +57,26 @@
           }
         }
       },
+      "InputKit.Maui/4.4.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/InputKit.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/InputKit.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/8.0.8": {
         "type": "package",
         "compile": {
@@ -951,6 +971,19 @@
           }
         }
       },
+      "Plainer.Maui/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plainer.Maui.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plainer.Maui.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "QuestPDF/2024.3.0": {
         "type": "package",
         "compile": {
@@ -1449,6 +1482,40 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "UraniumUI/2.11.0": {
+        "type": "package",
+        "dependencies": {
+          "InputKit.Maui": "4.4.7",
+          "Microsoft.Maui.Controls": "8.0.83",
+          "Plainer.Maui": "1.7.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "UraniumUI.Material/2.11.0": {
+        "type": "package",
+        "dependencies": {
+          "UraniumUI": "2.11.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "BLE.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -1549,6 +1616,26 @@
         "runtime": {
           "lib/net7.0/FluentValidation.dll": {
             "related": ".xml"
+          }
+        }
+      },
+      "InputKit.Maui/4.4.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/InputKit.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/InputKit.Maui.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
           }
         }
       },
@@ -2412,6 +2499,19 @@
           }
         }
       },
+      "Plainer.Maui/1.7.1": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0-windows10.0.19041/Plainer.Maui.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/Plainer.Maui.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "QuestPDF/2024.3.0": {
         "type": "package",
         "compile": {
@@ -2869,6 +2969,40 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
+      "UraniumUI/2.11.0": {
+        "type": "package",
+        "dependencies": {
+          "InputKit.Maui": "4.4.7",
+          "Microsoft.Maui.Controls": "8.0.83",
+          "Plainer.Maui": "1.7.1"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
+      "UraniumUI.Material/2.11.0": {
+        "type": "package",
+        "dependencies": {
+          "UraniumUI": "2.11.0"
+        },
+        "compile": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
+            "related": ".pdb"
+          }
+        },
+        "runtime": {
+          "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
+            "related": ".pdb"
+          }
+        }
+      },
       "BLE.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -3002,6 +3136,40 @@
         "lib/netstandard2.0/FluentValidation.xml",
         "lib/netstandard2.1/FluentValidation.dll",
         "lib/netstandard2.1/FluentValidation.xml"
+      ]
+    },
+    "InputKit.Maui/4.4.7": {
+      "sha512": "nrHIYEVnjJoRKBDEO9Wji8i2bNK3VaZOkWRy8srLXgvASX74SutOC7RuN95MUJqp4uTCCw1E9pNw26gMSKXqZA==",
+      "type": "package",
+      "path": "inputkit.maui/4.4.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "content/icon512.png",
+        "contentFiles/any/net8.0-android34.0/icon512.png",
+        "contentFiles/any/net8.0-ios17.5/icon512.png",
+        "contentFiles/any/net8.0-maccatalyst17.5/icon512.png",
+        "contentFiles/any/net8.0-windows10.0.19041/icon512.png",
+        "contentFiles/any/net8.0/icon512.png",
+        "icon512.png",
+        "inputkit.maui.4.4.7.nupkg.sha512",
+        "inputkit.maui.nuspec",
+        "lib/net8.0-android34.0/InputKit.Maui.dll",
+        "lib/net8.0-android34.0/InputKit.Maui.pdb",
+        "lib/net8.0-android34.0/InputKit.Maui.xml",
+        "lib/net8.0-ios17.5/InputKit.Maui.dll",
+        "lib/net8.0-ios17.5/InputKit.Maui.pdb",
+        "lib/net8.0-ios17.5/InputKit.Maui.xml",
+        "lib/net8.0-maccatalyst17.5/InputKit.Maui.dll",
+        "lib/net8.0-maccatalyst17.5/InputKit.Maui.pdb",
+        "lib/net8.0-maccatalyst17.5/InputKit.Maui.xml",
+        "lib/net8.0-windows10.0.19041/InputKit.Maui.dll",
+        "lib/net8.0-windows10.0.19041/InputKit.Maui.pdb",
+        "lib/net8.0-windows10.0.19041/InputKit.Maui.xml",
+        "lib/net8.0/InputKit.Maui.dll",
+        "lib/net8.0/InputKit.Maui.pdb",
+        "lib/net8.0/InputKit.Maui.xml"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/8.0.8": {
@@ -5618,6 +5786,53 @@
         "postgresql.png"
       ]
     },
+    "Plainer.Maui/1.7.1": {
+      "sha512": "rou+ErJ0l2GkJyMYRKtPiPxEtOGngj7Lv7H5NVACG9baPy3D3tGLO5ma16Usem5/vddu8Ov6bZaXntPMQANXQw==",
+      "type": "package",
+      "path": "plainer.maui/1.7.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "icon.png",
+        "lib/net8.0-android34.0/Plainer.Maui.dll",
+        "lib/net8.0-android34.0/Plainer.Maui.pdb",
+        "lib/net8.0-android34.0/Plainer.Maui.xml",
+        "lib/net8.0-ios17.0/Plainer.Maui.dll",
+        "lib/net8.0-ios17.0/Plainer.Maui.pdb",
+        "lib/net8.0-maccatalyst17.0/Plainer.Maui.dll",
+        "lib/net8.0-maccatalyst17.0/Plainer.Maui.pdb",
+        "lib/net8.0-windows10.0.19041/Plainer.Maui.dll",
+        "lib/net8.0-windows10.0.19041/Plainer.Maui.pdb",
+        "lib/net8.0/Plainer.Maui.dll",
+        "lib/net8.0/Plainer.Maui.pdb",
+        "plainer.maui.1.7.1.nupkg.sha512",
+        "plainer.maui.nuspec",
+        "src/Plainer.Maui/Controls/DatePickerView.cs",
+        "src/Plainer.Maui/Controls/EditorView.cs",
+        "src/Plainer.Maui/Controls/EntryView.cs",
+        "src/Plainer.Maui/Controls/PickerView.cs",
+        "src/Plainer.Maui/Controls/TimePickerView.cs",
+        "src/Plainer.Maui/Handlers/DatePickerViewHandler.cs",
+        "src/Plainer.Maui/Handlers/EditorViewHandler.cs",
+        "src/Plainer.Maui/Handlers/EntryViewHandler.cs",
+        "src/Plainer.Maui/Handlers/PickerViewHandler.cs",
+        "src/Plainer.Maui/Handlers/TimePickerViewHandler.cs",
+        "src/Plainer.Maui/MauiHandlerCollectionExtensions.cs",
+        "src/Plainer.Maui/Plainer.Maui.csproj",
+        "src/Plainer.Maui/Platforms/Android/PlatformClass1.cs",
+        "src/Plainer.Maui/Platforms/MacCatalyst/PlatformClass1.cs",
+        "src/Plainer.Maui/Platforms/Windows/PlatformClass1.cs",
+        "src/Plainer.Maui/Platforms/iOS/PlatformClass1.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-android/Plainer.Maui.GlobalUsings.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-android/__Microsoft.Android.Resource.Designer.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-ios/Plainer.Maui.GlobalUsings.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-ios/Plainer.Maui.nfloat.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-maccatalyst/Plainer.Maui.GlobalUsings.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-maccatalyst/Plainer.Maui.nfloat.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0-windows10.0.19041.0/Plainer.Maui.GlobalUsings.g.cs",
+        "src/Plainer.Maui/obj/Release/net8.0/Plainer.Maui.GlobalUsings.g.cs"
+      ]
+    },
     "QuestPDF/2024.3.0": {
       "sha512": "3UsHztlheCEa+EgGaND8jSwQrAduayBwwerzAfb40AJM+epRCz/jome2qadEeFrmAC7bqSsggalsSsAriCKHnA==",
       "type": "package",
@@ -7176,6 +7391,76 @@
         "version.txt"
       ]
     },
+    "UraniumUI/2.11.0": {
+      "sha512": "q3luVI96S1CHPptw2xr+U6g4gR5BW1b8pk0Jaap5A9RmNrXfCiorQE1IcHq0S7QqOXFQZdeC7iy7rYwi2xqudw==",
+      "type": "package",
+      "path": "uraniumui/2.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0-android34.0/UraniumUI.dll",
+        "lib/net8.0-android34.0/UraniumUI.pdb",
+        "lib/net8.0-android34.0/UraniumUI.xml",
+        "lib/net8.0-ios18.0/UraniumUI.dll",
+        "lib/net8.0-ios18.0/UraniumUI.pdb",
+        "lib/net8.0-maccatalyst18.0/UraniumUI.dll",
+        "lib/net8.0-maccatalyst18.0/UraniumUI.pdb",
+        "lib/net8.0-windows10.0.19041/UraniumUI.dll",
+        "lib/net8.0-windows10.0.19041/UraniumUI.pdb",
+        "lib/net8.0/UraniumUI.dll",
+        "lib/net8.0/UraniumUI.pdb",
+        "lib/net9.0-android35.0/UraniumUI.dll",
+        "lib/net9.0-android35.0/UraniumUI.pdb",
+        "lib/net9.0-android35.0/UraniumUI.xml",
+        "lib/net9.0-ios18.0/UraniumUI.dll",
+        "lib/net9.0-ios18.0/UraniumUI.pdb",
+        "lib/net9.0-maccatalyst18.0/UraniumUI.dll",
+        "lib/net9.0-maccatalyst18.0/UraniumUI.pdb",
+        "lib/net9.0-windows10.0.19041/UraniumUI.dll",
+        "lib/net9.0-windows10.0.19041/UraniumUI.pdb",
+        "lib/net9.0/UraniumUI.dll",
+        "lib/net9.0/UraniumUI.pdb",
+        "logo_128.png",
+        "uraniumui.2.11.0.nupkg.sha512",
+        "uraniumui.nuspec"
+      ]
+    },
+    "UraniumUI.Material/2.11.0": {
+      "sha512": "goNIfNh5ayYr+Pa3xF4blCHFth5Si6/S2v/3HJ8NErJFs60gHlsLc8u+yLX76bS3w9DsIXwUAn8pOCZ1L9LS3g==",
+      "type": "package",
+      "path": "uraniumui.material/2.11.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net8.0-android34.0/UraniumUI.Material.dll",
+        "lib/net8.0-android34.0/UraniumUI.Material.pdb",
+        "lib/net8.0-android34.0/UraniumUI.Material.xml",
+        "lib/net8.0-ios18.0/UraniumUI.Material.dll",
+        "lib/net8.0-ios18.0/UraniumUI.Material.pdb",
+        "lib/net8.0-maccatalyst18.0/UraniumUI.Material.dll",
+        "lib/net8.0-maccatalyst18.0/UraniumUI.Material.pdb",
+        "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll",
+        "lib/net8.0-windows10.0.19041/UraniumUI.Material.pdb",
+        "lib/net8.0/UraniumUI.Material.dll",
+        "lib/net8.0/UraniumUI.Material.pdb",
+        "lib/net9.0-android35.0/UraniumUI.Material.dll",
+        "lib/net9.0-android35.0/UraniumUI.Material.pdb",
+        "lib/net9.0-android35.0/UraniumUI.Material.xml",
+        "lib/net9.0-ios18.0/UraniumUI.Material.dll",
+        "lib/net9.0-ios18.0/UraniumUI.Material.pdb",
+        "lib/net9.0-maccatalyst18.0/UraniumUI.Material.dll",
+        "lib/net9.0-maccatalyst18.0/UraniumUI.Material.pdb",
+        "lib/net9.0-windows10.0.19041/UraniumUI.Material.dll",
+        "lib/net9.0-windows10.0.19041/UraniumUI.Material.pdb",
+        "lib/net9.0/UraniumUI.Material.dll",
+        "lib/net9.0/UraniumUI.Material.pdb",
+        "logo_128.png",
+        "uraniumui.material.2.11.0.nupkg.sha512",
+        "uraniumui.material.nuspec"
+      ]
+    },
     "BLE.Data/1.0.0": {
       "type": "project",
       "path": "../BLE.Data/BLE.Data.csproj",
@@ -7200,24 +7485,25 @@
       "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.8",
       "Microsoft.Extensions.DependencyInjection >= 8.0.1",
       "Microsoft.Maui.Controls >= 8.0.100",
-      "Microsoft.Maui.Controls.Compatibility >= 8.0.100"
+      "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
+      "UraniumUI.Material >= 2.11.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cbalbach\\.nuget\\packages\\": {}
+    "C:\\Users\\jcrey\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
       "projectName": "BLE.UI.Debug",
-      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
-      "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\obj\\",
+      "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows10.0.19041.0"
@@ -7230,11 +7516,11 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
             },
-            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
-              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
+            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
+              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
             }
           }
         }
@@ -7273,6 +7559,10 @@
           "Microsoft.Maui.Controls.Compatibility": {
             "target": "Package",
             "version": "[8.0.100, )"
+          },
+          "UraniumUI.Material": {
+            "target": "Package",
+            "version": "[2.11.0, )"
           }
         },
         "imports": [

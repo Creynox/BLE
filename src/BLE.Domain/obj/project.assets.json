@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\cbalbach\\.nuget\\packages\\": {}
+    "C:\\Users\\jcrey\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
       "projectName": "BLE.Domain",
-      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
-      "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\obj\\",
+      "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
+      "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

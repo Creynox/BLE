@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {}
+    "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+    "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj",
         "projectName": "BLE.Data",
-        "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj",
-        "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\obj\\",
+        "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj",
+        "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -27,8 +27,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
-                "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
+              "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
+                "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
               }
             }
           }
@@ -91,17 +91,17 @@
         }
       }
     },
-    "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
+    "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
         "projectName": "BLE.Domain",
-        "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
-        "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj",
+        "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -150,17 +150,17 @@
         }
       }
     },
-    "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
+    "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
+        "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
         "projectName": "BLE.Services",
-        "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
-        "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\obj\\",
+        "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj",
+        "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -173,11 +173,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-                "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+              "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+                "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
               },
-              "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
-                "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
+              "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
+                "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
               }
             }
           }

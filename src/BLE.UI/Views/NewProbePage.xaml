@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uranium:UraniumContentPage
+    x:Class="BLE.UI.Views.NewProbePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material"
+    xmlns:viewModels="clr-namespace:BLE.UI.ViewModels"
+    x:DataType="viewModels:NewProbeViewModel"
+    Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="16" Padding="24">
+            <Label Text="Neue Probe anlegen" FontSize="28" FontAttributes="Bold" />
+
+            <material:TextField
+                Title="Probencode"
+                Text="{Binding Code}" />
+
+            <Picker Title="Material" SelectedItem="{Binding Material}">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>asphalt</x:String>
+                        <x:String>beton</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <DatePicker
+                Date="{Binding SamplingDate}"
+                Format="dd.MM.yyyy" />
+
+            <material:TextField
+                Title="Werk"
+                Text="{Binding Plant}" />
+
+            <material:TextField
+                Title="Produkt"
+                Text="{Binding Product}" />
+
+            <Button
+                Text="Probe speichern"
+                StyleClass="FilledButton"
+                Command="{Binding CreateProbeCommand}" />
+        </VerticalStackLayout>
+    </ScrollView>
+</uranium:UraniumContentPage>
