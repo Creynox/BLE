@@ -23,6 +23,7 @@ public partial class AppShell : Shell
         Routing.RegisterRoute(nameof(ProbenPage), typeof(ProbenPage));
         Routing.RegisterRoute(nameof(NewProbePage), typeof(NewProbePage));
         Routing.RegisterRoute(nameof(SettingsPage), typeof(SettingsPage));
+        Routing.RegisterRoute("workspace/sts", typeof(StsTestWorkspacePage));
 
         _session.UserChanged += OnUserChanged;
         Navigating += OnShellNavigating;

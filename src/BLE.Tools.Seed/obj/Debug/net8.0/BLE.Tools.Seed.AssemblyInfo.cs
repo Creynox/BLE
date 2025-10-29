@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BLE.Tools.Seed")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+917f181c2e5e5e9137a39dbc0543948b42bab54c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+423502868a41bdd69174b6eac0a6b5b57bf31c19")]
 [assembly: System.Reflection.AssemblyProductAttribute("BLE.Tools.Seed")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BLE.Tools.Seed")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

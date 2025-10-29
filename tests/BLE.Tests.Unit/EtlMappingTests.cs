@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Text.Json;
 using BLE.Services.Config;
@@ -10,7 +11,8 @@ public class EtlMappingTests
     [Fact]
     public void Can_Load_Sieb_Mapping()
     {
-        var path = Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "config", "etl", "mapping.sieb.json");
+        var basePath = AppContext.BaseDirectory;
+        var path = Path.GetFullPath(Path.Combine(basePath, "..", "..", "..", "..", "..", "config", "etl", "mapping.sieb.json"));
         var json = File.ReadAllText(path);
         var map = JsonSerializer.Deserialize<EtlMapping>(json, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
         Assert.NotNull(map);

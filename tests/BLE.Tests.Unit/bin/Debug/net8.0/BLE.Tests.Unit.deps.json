@@ -8,7 +8,9 @@
     ".NETCoreApp,Version=v8.0": {
       "BLE.Tests.Unit/1.0.0": {
         "dependencies": {
+          "BLE.Data": "1.0.0",
           "BLE.Services": "1.0.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "8.0.8",
           "Microsoft.NET.Test.Sdk": "17.11.1",
           "xunit": "2.7.0",
           "xunit.runner.visualstudio": "2.5.7"

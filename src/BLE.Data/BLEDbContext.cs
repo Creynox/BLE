@@ -4,6 +4,7 @@ using BLE.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BLE.Data;
 
@@ -22,6 +23,11 @@ public class BLEDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
     public DbSet<Kornfraktion> Kornfraktionen => Set<Kornfraktion>();
     public DbSet<EtlFile> EtlFiles => Set<EtlFile>();
     public DbSet<EtlLog> EtlLogs => Set<EtlLog>();
+    public DbSet<StsTest> StsTests => Set<StsTest>();
+    public DbSet<StsSiebanalyse> StsSiebanalysen => Set<StsSiebanalyse>();
+    public DbSet<StsKornform> StsKornformen => Set<StsKornform>();
+    public DbSet<StsKochversuch> StsKochversuche => Set<StsKochversuch>();
+    public DbSet<StsErgebnis> StsErgebnisse => Set<StsErgebnis>();
 
     protected override void OnModelCreating(ModelBuilder b)
     {
@@ -37,6 +43,42 @@ public class BLEDbContext : IdentityDbContext<ApplicationUser, IdentityRole<Guid
         b.Entity<Grenzwert>().Property(x => x.Scope).HasDefaultValue("global");
 
         // Simple required configuration for strings length could be added here
+
+        var materialtypConverter = new EnumToStringConverter<StsMaterialtyp>();
+
+        b.Entity<StsTest>(entity =>
+        {
+            entity.Property(x => x.Probencode).HasMaxLength(128);
+            entity.Property(x => x.Werk).HasMaxLength(128);
+            entity.Property(x => x.Produkt).HasMaxLength(128);
+            entity.Property(x => x.Status).HasMaxLength(64);
+            entity.Property(x => x.Materialtyp)
+                .HasConversion(materialtypConverter)
+                .HasMaxLength(32);
+
+            entity.HasCheckConstraint("ck_ststest_materialtyp", "materialtyp IN ('Asphalt','Beton')");
+            entity.HasMany(x => x.Siebanalysen)
+                .WithOne(x => x.StsTest!)
+                .HasForeignKey(x => x.StsTestId)
+                .OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(x => x.Kornform)
+                .WithOne(x => x.StsTest!)
+                .HasForeignKey<StsKornform>(x => x.StsTestId)
+                .OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(x => x.Kochversuch)
+                .WithOne(x => x.StsTest!)
+                .HasForeignKey<StsKochversuch>(x => x.StsTestId)
+                .OnDelete(DeleteBehavior.Cascade);
+            entity.HasOne(x => x.Ergebnis)
+                .WithOne(x => x.StsTest!)
+                .HasForeignKey<StsErgebnis>(x => x.StsTestId)
+                .OnDelete(DeleteBehavior.Cascade);
+        });
+
+        b.Entity<StsSiebanalyse>(entity =>
+        {
+            entity.Property(x => x.SiebBezeichnung).HasMaxLength(64);
+            entity.HasIndex(x => new { x.StsTestId, x.SiebBezeichnung }).IsUnique();
+        });
     }
 }
-

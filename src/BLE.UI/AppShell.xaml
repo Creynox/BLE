@@ -15,6 +15,10 @@
             Route="proben"
             ContentTemplate="{DataTemplate views:ProbenPage}" />
         <ShellContent
+            Title="Labor -> STS-Tests"
+            Route="workspace/sts"
+            ContentTemplate="{DataTemplate views:StsTestWorkspacePage}" />
+        <ShellContent
             Title="Neue Probe"
             Route="neue-probe"
             ContentTemplate="{DataTemplate views:NewProbePage}" />

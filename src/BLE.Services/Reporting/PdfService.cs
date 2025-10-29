@@ -3,6 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using BLE.Data;
+using BLE.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using QuestPDF.Fluent;
 using QuestPDF.Helpers;
@@ -18,6 +19,130 @@ public class PdfService
     {
         _db = db;
         QuestPDF.Settings.License = LicenseType.Community;
+    }
+
+    public void GenerateStsReport(StsTest test, string outputPath)
+    {
+        if (test is null)
+        {
+            throw new ArgumentNullException(nameof(test));
+        }
+
+        if (string.IsNullOrWhiteSpace(outputPath))
+        {
+            throw new ArgumentException("Output path is required.", nameof(outputPath));
+        }
+
+        var fractions = (test.Siebanalysen ?? Enumerable.Empty<StsSiebanalyse>())
+            .OrderByDescending(f => f.Einwaage)
+            .ToList();
+        var kornform = test.Kornform;
+        var koch = test.Kochversuch;
+        var ergebnis = test.Ergebnis;
+
+        var formattedMaterial = test.Materialtyp.ToString();
+        var formattedDate = test.Entnahmedatum?.ToString("dd.MM.yyyy") ?? "-";
+
+        Document.Create(container =>
+        {
+            container.Page(page =>
+            {
+                page.Size(PageSizes.A4);
+                page.Margin(25);
+                page.Header().Column(col =>
+                {
+                    col.Spacing(2);
+                    col.Item().Text("BLE Baustofflabor").SemiBold().FontSize(18);
+                    col.Item().Text($"STS-Prüfbericht – {test.Probencode}").FontSize(14);
+                });
+
+                page.Content().Column(stack =>
+                {
+                    stack.Spacing(15);
+
+                    stack.Item().Border(0.5f).BorderColor(Colors.Grey.Lighten2).Padding(10).Column(section =>
+                    {
+                        section.Spacing(5);
+                        section.Item().Text($"Probencode: {test.Probencode}");
+                        section.Item().Text($"Entnahmedatum: {formattedDate}");
+                        section.Item().Text($"Werk / Produkt: {test.Werk ?? "-"} / {test.Produkt ?? "-"}");
+                        section.Item().Text($"Materialtyp: {formattedMaterial}");
+                        section.Item().Text($"Status: {test.Status ?? "-"}");
+                    });
+
+                    if (fractions.Count > 0)
+                    {
+                        stack.Item().Text("Siebanalyse").SemiBold();
+                        stack.Item().Table(table =>
+                        {
+                            table.ColumnsDefinition(columns =>
+                            {
+                                columns.RelativeColumn(2);
+                                columns.RelativeColumn(1);
+                                columns.RelativeColumn(1);
+                                columns.RelativeColumn(1);
+                                columns.RelativeColumn(1);
+                            });
+
+                            table.Header(header =>
+                            {
+                                header.Cell().Text("Sieb");
+                                header.Cell().AlignRight().Text("Einwaage (g)");
+                                header.Cell().AlignRight().Text("Rückwaage (g)");
+                                header.Cell().AlignRight().Text("Durchgang %");
+                                header.Cell().AlignRight().Text("Rückgang %");
+                            });
+
+                            foreach (var fraction in fractions)
+                            {
+                                table.Cell().Text(fraction.SiebBezeichnung ?? "-");
+                                table.Cell().AlignRight().Text(fraction.Einwaage.ToString("0.###"));
+                                table.Cell().AlignRight().Text(fraction.Rueckwaage.ToString("0.###"));
+                                table.Cell().AlignRight().Text(fraction.DurchgangProzent.ToString("0.##"));
+                                table.Cell().AlignRight().Text(fraction.RueckgangProzent.ToString("0.##"));
+                            }
+                        });
+                    }
+
+                    stack.Item().Row(row =>
+                    {
+                        row.ConstantItem(260).Element(left =>
+                        {
+                            left.Border(0.5f).BorderColor(Colors.Grey.Lighten2).Padding(10).Column(section =>
+                            {
+                                section.Spacing(5);
+                                section.Item().Text("Kornform").SemiBold();
+                                section.Item().Text($"Einwaage gesamt: {kornform?.EinwaageGesamt.ToString("0.###") ?? "-"} g");
+                                section.Item().Text($"Schlecht geformt: {kornform?.EinwaageSchlechtGeformt.ToString("0.###") ?? "-"} g");
+                            });
+                        });
+
+                        row.RelativeItem().Element(right =>
+                        {
+                            right.Border(0.5f).BorderColor(Colors.Grey.Lighten2).Padding(10).Column(section =>
+                            {
+                                section.Spacing(5);
+                                section.Item().Text("Kochversuch").SemiBold();
+                                section.Item().Text($"Einwaage vor Kochen: {koch?.EinwaageVorKochen.ToString("0.###") ?? "-"} g");
+                                section.Item().Text($"Rückwaage nach Kochen: {koch?.RueckwaageNachKochen.ToString("0.###") ?? "-"} g");
+                                var kochZeitText = koch is null ? "-" : (koch.Kochzeit == TimeSpan.Zero ? "-" : koch.Kochzeit.ToString(@"hh\:mm"));
+                                section.Item().Text($"Kochzeit: {kochZeitText}");
+                            });
+                        });
+                    });
+
+                    stack.Item().Border(0.5f).BorderColor(Colors.Grey.Lighten2).Padding(10).Column(section =>
+                    {
+                        section.Spacing(5);
+                        section.Item().Text("Ergebnis").SemiBold();
+                        section.Item().Text($"S1 (< 5,6 mm): {ergebnis?.S1.ToString("0.##") ?? "-"} %");
+                        section.Item().Text($"S2 (< 0,063 mm): {ergebnis?.S2.ToString("0.##") ?? "-"} %");
+                        section.Item().Text($"Kornform-Index: {ergebnis?.KornformIndex.ToString("0.##") ?? "-"} %");
+                        section.Item().Text($"Grenzwerte OK: {(ergebnis?.GrenzwerteOk == true ? "Ja" : "Nein")}");
+                    });
+                });
+            });
+        }).GeneratePdf(outputPath);
     }
 
     public async Task<string> ExportProbeAsync(Guid probeId, string outputDir)

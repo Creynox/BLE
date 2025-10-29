@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<uranium:UraniumContentPage
+    x:Class="BLE.UI.Views.StsTestWorkspacePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:domain="clr-namespace:BLE.Domain.Entities;assembly=BLE.Domain"
+    xmlns:uranium="http://schemas.enisn-projects.io/dotnet/maui/uraniumui"
+    xmlns:viewModels="clr-namespace:BLE.UI.ViewModels"
+    x:Name="PageRoot"
+    x:DataType="viewModels:StsTestWorkspaceViewModel"
+    Title="{Binding Title}">
+
+    <Grid Padding="24" ColumnSpacing="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.ColumnSpan="3"
+            Text="STS-Test Workspace"
+            FontAttributes="Bold"
+            FontSize="24" />
+
+        <VerticalStackLayout
+            Grid.Row="1"
+            Grid.Column="0"
+            Spacing="12">
+            <SearchBar
+                Placeholder="Probencode suchen"
+                Text="{Binding SearchTerm}" />
+
+            <Button
+                Text="Neu"
+                StyleClass="FilledButton"
+                Command="{Binding NewCommand}" />
+
+            <CollectionView
+                x:Name="TestsList"
+                ItemsSource="{Binding Tests}"
+                SelectionMode="Single"
+                SelectedItem="{Binding SelectedListItem, Mode=TwoWay}"
+                SelectionChangedCommand="{Binding OpenCommand}"
+                SelectionChangedCommandParameter="{Binding SelectedItem, Source={x:Reference TestsList}}">
+                <CollectionView.EmptyView>
+                    <Label
+                        Text="Keine STS-Tests vorhanden."
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center" />
+                </CollectionView.EmptyView>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate x:DataType="domain:StsTest">
+                        <Border
+                            Padding="12"
+                            StrokeShape="RoundRectangle 8"
+                            Margin="0,0,0,8">
+                            <VerticalStackLayout>
+                                <Label
+                                    Text="{Binding Probencode}"
+                                    FontAttributes="Bold" />
+                                <Label
+                                    Text="{Binding Entnahmedatum, StringFormat='Entnahme: {0:dd.MM.yyyy}'}"
+                                    FontSize="12" />
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="1"
+            StrokeShape="RoundRectangle 12"
+            Padding="24">
+            <Grid>
+                <ScrollView>
+                    <ScrollView.Triggers>
+                        <DataTrigger
+                            TargetType="ScrollView"
+                            Binding="{Binding Current}"
+                            Value="{x:Null}">
+                            <Setter Property="IsVisible" Value="False" />
+                        </DataTrigger>
+                    </ScrollView.Triggers>
+
+                    <VerticalStackLayout Spacing="16">
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <VerticalStackLayout Spacing="12">
+                                <Label Text="Grunddaten" FontAttributes="Bold" FontSize="18" />
+                                <Entry
+                                    Placeholder="Probencode"
+                                    Text="{Binding Current.Probencode}" />
+                                <DatePicker
+                                    Date="{Binding Current.Entnahmedatum, Mode=TwoWay}"
+                                    Format="dd.MM.yyyy" />
+                                <Entry
+                                    Placeholder="Werk"
+                                    Text="{Binding Current.Werk}" />
+                                <Entry
+                                    Placeholder="Produkt"
+                                    Text="{Binding Current.Produkt}" />
+                                <Picker
+                                    Title="Materialtyp"
+                                    ItemsSource="{Binding Materialtypen}"
+                                    ItemDisplayBinding="{Binding .}"
+                                    SelectedItem="{Binding Current.Materialtyp}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <VerticalStackLayout Spacing="12">
+                                <HorizontalStackLayout HorizontalOptions="Fill">
+                                    <Label
+                                        Text="Siebfraktionen"
+                                        FontAttributes="Bold"
+                                        FontSize="18"
+                                        HorizontalOptions="StartAndExpand" />
+                                    <Button
+                                        Text="Fraktion hinzufügen"
+                                        Command="{Binding AddFractionCommand}" />
+                                </HorizontalStackLayout>
+
+                                <CollectionView
+                                    ItemsSource="{Binding Fractions}"
+                                    SelectionMode="None">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate x:DataType="domain:StsSiebanalyse">
+                                            <Border
+                                                StrokeShape="RoundRectangle 6"
+                                                Padding="12"
+                                                Margin="0,0,0,8">
+                                                <Grid ColumnDefinitions="2*,1*,1*,Auto" ColumnSpacing="12" RowSpacing="6">
+                                                    <Entry
+                                                        Grid.Column="0"
+                                                        Placeholder="Sieb"
+                                                        Text="{Binding SiebBezeichnung}" />
+                                                    <Entry
+                                                        Grid.Column="1"
+                                                        Placeholder="Einwaage"
+                                                        Keyboard="Numeric"
+                                                        Text="{Binding Einwaage}" />
+                                                    <Entry
+                                                        Grid.Column="2"
+                                                        Placeholder="Rückwaage"
+                                                        Keyboard="Numeric"
+                                                        Text="{Binding Rueckwaage}" />
+                                                    <Button
+                                                        Grid.Column="3"
+                                                        Text="Entfernen"
+                                                        Command="{Binding Source={x:Reference PageRoot}, Path=BindingContext.RemoveFractionCommand}"
+                                                        CommandParameter="{Binding .}" />
+                                                </Grid>
+                                            </Border>
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <VerticalStackLayout Spacing="12">
+                                <Label Text="Kornformen" FontAttributes="Bold" FontSize="18" />
+                                <Entry
+                                    Placeholder="Einwaage gesamt"
+                                    Keyboard="Numeric"
+                                    Text="{Binding Current.Kornform.EinwaageGesamt}" />
+                                <Entry
+                                    Placeholder="Einwaage schlecht geformt"
+                                    Keyboard="Numeric"
+                                    Text="{Binding Current.Kornform.EinwaageSchlechtGeformt}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <VerticalStackLayout Spacing="12">
+                                <Label Text="Kochversuch" FontAttributes="Bold" FontSize="18" />
+                                <Entry
+                                    Placeholder="Einwaage vor Kochen"
+                                    Keyboard="Numeric"
+                                    Text="{Binding Current.Kochversuch.EinwaageVorKochen}" />
+                                <Entry
+                                    Placeholder="Rückwaage nach Kochen"
+                                    Keyboard="Numeric"
+                                    Text="{Binding Current.Kochversuch.RueckwaageNachKochen}" />
+                                <TimePicker
+                                    Time="{Binding Current.Kochversuch.Kochzeit, Mode=TwoWay}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <Border.Triggers>
+                                <DataTrigger
+                                    TargetType="Border"
+                                    Binding="{Binding Current.Ergebnis}"
+                                    Value="{x:Null}">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Border.Triggers>
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="Berechnungsergebnis" FontAttributes="Bold" FontSize="18" />
+                                <Label Text="{Binding Current.Ergebnis.S1, StringFormat='S1 (&lt; 5,6 mm): {0:F2} %'}" />
+                                <Label Text="{Binding Current.Ergebnis.S2, StringFormat='S2 (&lt; 0,063 mm): {0:F2} %'}" />
+                                <Label Text="{Binding Current.Ergebnis.KornformIndex, StringFormat='Kornform-Index: {0:F2} %'}" />
+                                <Label Text="{Binding Current.Ergebnis.GrenzwerteOk, StringFormat='Grenzwerte okay: {0}'}" />
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <Border StrokeShape="RoundRectangle 8" Padding="16">
+                            <Border.Triggers>
+                                <DataTrigger
+                                    TargetType="Border"
+                                    Binding="{Binding HasValidationErrors}"
+                                    Value="False">
+                                    <Setter Property="IsVisible" Value="False" />
+                                </DataTrigger>
+                            </Border.Triggers>
+                            <VerticalStackLayout Spacing="8">
+                                <Label Text="Validierungsfehler" FontAttributes="Bold" FontSize="18" />
+                                <CollectionView
+                                    ItemsSource="{Binding ValidationErrors}"
+                                    SelectionMode="None">
+                                    <CollectionView.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label
+                                                Text="{Binding .}"
+                                                TextColor="Red"
+                                                LineBreakMode="WordWrap" />
+                                        </DataTemplate>
+                                    </CollectionView.ItemTemplate>
+                                </CollectionView>
+                            </VerticalStackLayout>
+                        </Border>
+
+                        <HorizontalStackLayout
+                            Spacing="12"
+                            HorizontalOptions="End">
+                            <Button
+                                Text="Berechnen"
+                                Command="{Binding ComputeCommand}" />
+                            <Button
+                                Text="Speichern"
+                                StyleClass="FilledButton"
+                                Command="{Binding SaveCommand}" />
+                            <Button
+                                Text="PDF"
+                                Command="{Binding ExportPdfCommand}" />
+                        </HorizontalStackLayout>
+                    </VerticalStackLayout>
+                </ScrollView>
+
+                <Label
+                    Text="Kein STS-Test ausgewählt."
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    IsVisible="False">
+                    <Label.Triggers>
+                        <DataTrigger
+                            TargetType="Label"
+                            Binding="{Binding Current}"
+                            Value="{x:Null}">
+                            <Setter Property="IsVisible" Value="True" />
+                        </DataTrigger>
+                    </Label.Triggers>
+                </Label>
+            </Grid>
+        </Border>
+
+        <Border
+            Grid.Row="1"
+            Grid.Column="2"
+            StrokeShape="RoundRectangle 12"
+            Padding="24">
+            <VerticalStackLayout Spacing="8">
+                <Label
+                    Text="Info"
+                    FontAttributes="Bold"
+                    FontSize="18" />
+                <Label
+                    Text="Hier erscheinen künftig Hinweise und Validierungsfehler."
+                    LineBreakMode="WordWrap" />
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</uranium:UraniumContentPage>

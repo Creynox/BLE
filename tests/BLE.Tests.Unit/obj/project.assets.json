@@ -3962,7 +3962,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "BLE.Data >= 1.0.0",
       "BLE.Services >= 1.0.0",
+      "Microsoft.EntityFrameworkCore.Sqlite >= 8.0.8",
       "Microsoft.NET.Test.Sdk >= 17.11.1",
       "xunit >= 2.7.0",
       "xunit.runner.visualstudio >= 2.5.7"
@@ -3994,6 +3996,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            },
             "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
               "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
             }
@@ -4015,6 +4020,10 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Sqlite": {
+            "target": "Package",
+            "version": "[8.0.8, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[17.11.1, )"

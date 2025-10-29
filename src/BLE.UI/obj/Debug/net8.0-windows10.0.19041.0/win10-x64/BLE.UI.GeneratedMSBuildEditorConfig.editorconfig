@@ -72,3 +72,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.SettingsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Views\SettingsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Views\SettingsPage.xaml
+
+[C:/Users/cbalbach/.codex/BLE Projekt/BLE/src/BLE.UI/Views/StsTestWorkspacePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = BLE.UI.Views.StsTestWorkspacePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\StsTestWorkspacePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\StsTestWorkspacePage.xaml

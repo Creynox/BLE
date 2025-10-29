@@ -4,6 +4,7 @@ using BLE.Data;
 using BLE.Services.Etl;
 using BLE.Services.Reporting;
 using BLE.Services.Rules;
+using BLE.Services.Sts;
 using BLE.UI.Services.UI;
 using BLE.UI.ViewModels;
 using BLE.UI.Views;
@@ -51,18 +52,29 @@ public static class MauiProgram
         builder.Services.AddScoped<EtlService>();
         builder.Services.AddScoped<PdfService>();
         builder.Services.AddScoped<RulesService>();
+        builder.Services.Configure<StsGrenzwerte>(options =>
+        {
+            options.S1Min = 50m;
+            options.S1Max = 80m;
+            options.S2Min = 20m;
+            options.S2Max = 40m;
+            options.KornformIndexMax = 15m;
+        });
+        builder.Services.AddScoped<IStsEvaluationService, StsEvaluationService>();
 
         builder.Services.AddTransient<LoginViewModel>();
         builder.Services.AddTransient<DashboardViewModel>();
         builder.Services.AddTransient<ProbenViewModel>();
         builder.Services.AddTransient<NewProbeViewModel>();
         builder.Services.AddTransient<SettingsViewModel>();
+        builder.Services.AddTransient<StsTestWorkspaceViewModel>();
 
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<DashboardPage>();
         builder.Services.AddTransient<ProbenPage>();
         builder.Services.AddTransient<NewProbePage>();
         builder.Services.AddTransient<SettingsPage>();
+        builder.Services.AddTransient<StsTestWorkspacePage>();
         builder.Services.AddSingleton<AppShell>();
 
         var app = builder.Build();
