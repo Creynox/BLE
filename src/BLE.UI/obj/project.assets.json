@@ -1482,7 +1482,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "UraniumUI/2.11.0": {
+      "UraniumUI/2.12.0": {
         "type": "package",
         "dependencies": {
           "InputKit.Maui": "4.4.7",
@@ -1500,10 +1500,10 @@
           }
         }
       },
-      "UraniumUI.Material/2.11.0": {
+      "UraniumUI.Material/2.12.0": {
         "type": "package",
         "dependencies": {
-          "UraniumUI": "2.11.0"
+          "UraniumUI": "2.12.0"
         },
         "compile": {
           "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
@@ -2969,7 +2969,7 @@
           "lib/netcoreapp2.1/_._": {}
         }
       },
-      "UraniumUI/2.11.0": {
+      "UraniumUI/2.12.0": {
         "type": "package",
         "dependencies": {
           "InputKit.Maui": "4.4.7",
@@ -2987,10 +2987,10 @@
           }
         }
       },
-      "UraniumUI.Material/2.11.0": {
+      "UraniumUI.Material/2.12.0": {
         "type": "package",
         "dependencies": {
-          "UraniumUI": "2.11.0"
+          "UraniumUI": "2.12.0"
         },
         "compile": {
           "lib/net8.0-windows10.0.19041/UraniumUI.Material.dll": {
@@ -7391,10 +7391,10 @@
         "version.txt"
       ]
     },
-    "UraniumUI/2.11.0": {
-      "sha512": "q3luVI96S1CHPptw2xr+U6g4gR5BW1b8pk0Jaap5A9RmNrXfCiorQE1IcHq0S7QqOXFQZdeC7iy7rYwi2xqudw==",
+    "UraniumUI/2.12.0": {
+      "sha512": "i2mYQDkQ32v4BLqbtXhLRZslGxGZc7KF5+Jp/ph8JyiOjqw75fy0K2LGdISpRrVHW6ryXNdTVB0XMWxg2X53+Q==",
       "type": "package",
-      "path": "uraniumui/2.11.0",
+      "path": "uraniumui/2.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7422,14 +7422,14 @@
         "lib/net9.0/UraniumUI.dll",
         "lib/net9.0/UraniumUI.pdb",
         "logo_128.png",
-        "uraniumui.2.11.0.nupkg.sha512",
+        "uraniumui.2.12.0.nupkg.sha512",
         "uraniumui.nuspec"
       ]
     },
-    "UraniumUI.Material/2.11.0": {
-      "sha512": "goNIfNh5ayYr+Pa3xF4blCHFth5Si6/S2v/3HJ8NErJFs60gHlsLc8u+yLX76bS3w9DsIXwUAn8pOCZ1L9LS3g==",
+    "UraniumUI.Material/2.12.0": {
+      "sha512": "SPCR2JsLeAf2jsTAOHmCEhwPRtaorT7ki3hKq/iYYdYSn07cUOb3NNxo5xrOCgUpmtb3h40qe5X8K0wTZq9CUw==",
       "type": "package",
-      "path": "uraniumui.material/2.11.0",
+      "path": "uraniumui.material/2.12.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -7457,7 +7457,7 @@
         "lib/net9.0/UraniumUI.Material.dll",
         "lib/net9.0/UraniumUI.Material.pdb",
         "logo_128.png",
-        "uraniumui.material.2.11.0.nupkg.sha512",
+        "uraniumui.material.2.12.0.nupkg.sha512",
         "uraniumui.material.nuspec"
       ]
     },
@@ -7486,24 +7486,25 @@
       "Microsoft.Extensions.DependencyInjection >= 8.0.1",
       "Microsoft.Maui.Controls >= 8.0.100",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.100",
-      "UraniumUI.Material >= 2.11.0"
+      "UraniumUI >= 2.12.0",
+      "UraniumUI.Material >= 2.12.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jcrey\\.nuget\\packages\\": {}
+    "C:\\Users\\cbalbach\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
       "projectName": "BLE.UI.Debug",
-      "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
-      "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.UI\\obj\\",
+      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\BLE.UI.csproj",
+      "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.UI\\obj\\",
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "configFilePaths": [
-        "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows10.0.19041.0"
@@ -7516,11 +7517,11 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "projectReferences": {
-            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
             },
-            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
-              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
             }
           }
         }
@@ -7560,9 +7561,13 @@
             "target": "Package",
             "version": "[8.0.100, )"
           },
+          "UraniumUI": {
+            "target": "Package",
+            "version": "[2.12.0, )"
+          },
           "UraniumUI.Material": {
             "target": "Package",
-            "version": "[2.11.0, )"
+            "version": "[2.12.0, )"
           }
         },
         "imports": [

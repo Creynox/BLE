@@ -34,7 +34,8 @@
     <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.100" />
 
     <!-- Uranium UI -->
-    <PackageReference Include="UraniumUI.Material" Version="2.11.0" />
+    <PackageReference Include="UraniumUI" Version="2.12.0" />
+    <PackageReference Include="UraniumUI.Material" Version="2.12.0" />
 
     <!-- EF Core wie in BLE.Data -->
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />

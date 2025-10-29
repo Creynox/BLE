@@ -3969,19 +3969,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jcrey\\.nuget\\packages\\": {}
+    "C:\\Users\\cbalbach\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\tests\\BLE.Tests.Unit\\BLE.Tests.Unit.csproj",
+      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\tests\\BLE.Tests.Unit\\BLE.Tests.Unit.csproj",
       "projectName": "BLE.Tests.Unit",
-      "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\tests\\BLE.Tests.Unit\\BLE.Tests.Unit.csproj",
-      "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\tests\\BLE.Tests.Unit\\obj\\",
+      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\tests\\BLE.Tests.Unit\\BLE.Tests.Unit.csproj",
+      "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\tests\\BLE.Tests.Unit\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3994,8 +3994,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
-              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Services\\BLE.Services.csproj"
             }
           }
         }

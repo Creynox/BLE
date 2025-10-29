@@ -1471,19 +1471,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jcrey\\.nuget\\packages\\": {}
+    "C:\\Users\\cbalbach\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Tools.Seed\\BLE.Tools.Seed.csproj",
+      "projectUniqueName": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Tools.Seed\\BLE.Tools.Seed.csproj",
       "projectName": "BLE.Tools.Seed",
-      "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Tools.Seed\\BLE.Tools.Seed.csproj",
-      "packagesPath": "C:\\Users\\jcrey\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Tools.Seed\\obj\\",
+      "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Tools.Seed\\BLE.Tools.Seed.csproj",
+      "packagesPath": "C:\\Users\\cbalbach\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Tools.Seed\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jcrey\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\cbalbach\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -1496,11 +1496,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
-              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Data\\BLE.Data.csproj"
             },
-            "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
-              "projectPath": "C:\\Users\\jcrey\\VSCode\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
+            "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj": {
+              "projectPath": "C:\\Users\\cbalbach\\.codex\\BLE Projekt\\BLE\\src\\BLE.Domain\\BLE.Domain.csproj"
             }
           }
         }
