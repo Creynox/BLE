@@ -88,6 +88,45 @@ namespace BLE.Data.Migrations
                     b.ToTable("AspNetUsers", (string)null);
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.AuditLog", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("AtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Entity")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("EntityId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("PayloadJson")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("UserId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Workspace_AuditLog", (string)null);
+                });
+
             modelBuilder.Entity("BLE.Domain.Entities.EtlFile", b =>
                 {
                     b.Property<Guid>("Id")
@@ -325,6 +364,28 @@ namespace BLE.Data.Migrations
                     b.ToTable("Kunden");
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.Materialtyp", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(80)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Workspace_Materialtyp", (string)null);
+                });
+
             modelBuilder.Entity("BLE.Domain.Entities.Messung", b =>
                 {
                     b.Property<Guid>("Id")
@@ -416,13 +477,27 @@ namespace BLE.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("BearbeiterId")
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CreatedAtUtc")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
+
+                    b.Property<DateTime?>("EingangAmUtc")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("Entnahmedatum")
                         .HasColumnType("TEXT");
 
                     b.Property<decimal?>("Feuchte")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("KundeId")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Materialtyp")
@@ -431,6 +506,9 @@ namespace BLE.Data.Migrations
                         .HasColumnType("TEXT")
                         .HasDefaultValue("asphalt");
 
+                    b.Property<Guid?>("MaterialtypId")
+                        .HasColumnType("TEXT");
+
                     b.Property<string>("Probencode")
                         .IsRequired()
                         .HasColumnType("TEXT");
@@ -438,8 +516,18 @@ namespace BLE.Data.Migrations
                     b.Property<string>("Produkt")
                         .HasColumnType("TEXT");
 
+                    b.Property<Guid?>("ProduktId")
+                        .HasColumnType("TEXT");
+
                     b.Property<Guid>("ProjektId")
                         .HasColumnType("TEXT");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(32)
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("Neu");
 
                     b.Property<decimal?>("Temperatur")
                         .HasColumnType("TEXT");
@@ -447,18 +535,68 @@ namespace BLE.Data.Migrations
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("TEXT");
 
+                    b.Property<DateTime?>("UpdatedAtUtc")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("Werk")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("WerkId")
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MaterialtypId");
+
                     b.HasIndex("Probencode")
                         .IsUnique();
+
+                    b.HasIndex("ProduktId");
+
+                    b.HasIndex("WerkId", "ProduktId", "MaterialtypId", "Status")
+                        .HasDatabaseName("ix_workspace_probe_scope");
 
                     b.ToTable("Proben", t =>
                         {
                             t.HasCheckConstraint("ck_probe_materialtyp", "materialtyp IN ('asphalt','beton')");
                         });
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Produkt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Kategorie")
+                        .IsRequired()
+                        .HasMaxLength(32)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(120)
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("SiebbereichText")
+                        .HasMaxLength(60)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("WerkId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("WerkId", "Name")
+                        .IsUnique();
+
+                    b.ToTable("Workspace_Produkt", (string)null);
                 });
 
             modelBuilder.Entity("BLE.Domain.Entities.Projekt", b =>
@@ -494,20 +632,294 @@ namespace BLE.Data.Migrations
                     b.ToTable("Projekte");
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.Pruefauftrag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("BearbeiterId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("CompletedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("ProbeId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("PruefverfahrenId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("StartedAtUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT")
+                        .HasDefaultValue("Offen");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PruefverfahrenId");
+
+                    b.HasIndex("ProbeId", "PruefverfahrenId")
+                        .IsUnique();
+
+                    b.ToTable("Workspace_Pruefauftrag", (string)null);
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.PruefplanVorlage", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("GueltigAbUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("GueltigBisUtc")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("MaterialtypId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(140)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("ProduktId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Version")
+                        .IsRequired()
+                        .HasMaxLength(40)
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid?>("WerkId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialtypId");
+
+                    b.HasIndex("ProduktId");
+
+                    b.HasIndex("WerkId", "ProduktId", "MaterialtypId", "Version")
+                        .IsUnique()
+                        .HasDatabaseName("ux_workspace_vorlage_scope");
+
+                    b.ToTable("Workspace_PruefplanVorlage", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("0b6a1e44-7009-4a63-bf4d-5b1b6c2c81c0"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            GueltigAbUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "STS 0-45 – Standard",
+                            Version = "v2025-10-A"
+                        },
+                        new
+                        {
+                            Id = new Guid("3e6a0732-91e5-4703-a8e2-2452b8b9e046"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            GueltigAbUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "2-8 Beton – Standard",
+                            Version = "v2025-10-B"
+                        },
+                        new
+                        {
+                            Id = new Guid("48f1b1c5-8c4d-49f7-8e21-f712b857d0e2"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            GueltigAbUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "KSM-MB – Füller",
+                            Version = "v2025-10-C"
+                        },
+                        new
+                        {
+                            Id = new Guid("0d54c3d1-7f28-4e3e-a8be-02f6e9e37f2a"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            GueltigAbUtc = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "BS 0-2 abgemagert (Enzberg)",
+                            Version = "v2025-10-D"
+                        });
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.PruefplanVorlageItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<bool>("Pflicht")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER")
+                        .HasDefaultValue(true);
+
+                    b.Property<Guid>("PruefverfahrenId")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("Reihenfolge")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<Guid>("VorlageId")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PruefverfahrenId");
+
+                    b.HasIndex("VorlageId", "PruefverfahrenId")
+                        .IsUnique();
+
+                    b.ToTable("Workspace_PruefplanVorlageItem", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("f8fce8cb-ee7e-4c3b-9a1e-1607d4f3f258"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("36a8607f-92d3-4d9c-b6d5-2db8a6355409"),
+                            Reihenfolge = 1,
+                            VorlageId = new Guid("0b6a1e44-7009-4a63-bf4d-5b1b6c2c81c0")
+                        },
+                        new
+                        {
+                            Id = new Guid("959c37b2-1b41-469f-ba4a-6c4505e6da93"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("d4f5389d-2195-4e1b-9568-7f7d4f7fdedd"),
+                            Reihenfolge = 2,
+                            VorlageId = new Guid("0b6a1e44-7009-4a63-bf4d-5b1b6c2c81c0")
+                        },
+                        new
+                        {
+                            Id = new Guid("0bd473c1-3933-4b97-9e26-9f4b0b1747ab"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = false,
+                            PruefverfahrenId = new Guid("9adf7c86-409b-46f0-957b-0d9c4b7b64f0"),
+                            Reihenfolge = 3,
+                            VorlageId = new Guid("0b6a1e44-7009-4a63-bf4d-5b1b6c2c81c0")
+                        },
+                        new
+                        {
+                            Id = new Guid("bb3d0294-3103-4948-9f35-2e0f5b85f14c"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("a6c0c49c-3f3c-4f66-a4b6-9efc0266f9b9"),
+                            Reihenfolge = 4,
+                            VorlageId = new Guid("0b6a1e44-7009-4a63-bf4d-5b1b6c2c81c0")
+                        },
+                        new
+                        {
+                            Id = new Guid("c0e98539-9bb2-48cf-9c0d-5d39b4fc4008"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("36a8607f-92d3-4d9c-b6d5-2db8a6355409"),
+                            Reihenfolge = 1,
+                            VorlageId = new Guid("3e6a0732-91e5-4703-a8e2-2452b8b9e046")
+                        },
+                        new
+                        {
+                            Id = new Guid("69f3bb40-0c6a-4f10-815b-8ac749d5b1e6"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("d4f5389d-2195-4e1b-9568-7f7d4f7fdedd"),
+                            Reihenfolge = 2,
+                            VorlageId = new Guid("3e6a0732-91e5-4703-a8e2-2452b8b9e046")
+                        },
+                        new
+                        {
+                            Id = new Guid("af9f0245-417e-43c4-83ae-567f62a8ede1"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("9adf7c86-409b-46f0-957b-0d9c4b7b64f0"),
+                            Reihenfolge = 3,
+                            VorlageId = new Guid("3e6a0732-91e5-4703-a8e2-2452b8b9e046")
+                        },
+                        new
+                        {
+                            Id = new Guid("7e128e41-9eb4-461f-be99-9c0ae3d02961"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("9adf7c86-409b-46f0-957b-0d9c4b7b64f0"),
+                            Reihenfolge = 1,
+                            VorlageId = new Guid("48f1b1c5-8c4d-49f7-8e21-f712b857d0e2")
+                        },
+                        new
+                        {
+                            Id = new Guid("8e3bf7cc-d79f-483b-b2f4-3f1ff19d4f50"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = false,
+                            PruefverfahrenId = new Guid("8b66f6d4-3d6f-478a-bf42-4cf2f5a9a0e2"),
+                            Reihenfolge = 2,
+                            VorlageId = new Guid("48f1b1c5-8c4d-49f7-8e21-f712b857d0e2")
+                        },
+                        new
+                        {
+                            Id = new Guid("d36f6f73-da64-428b-8d3e-4be4e2affbd6"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = true,
+                            PruefverfahrenId = new Guid("36a8607f-92d3-4d9c-b6d5-2db8a6355409"),
+                            Reihenfolge = 1,
+                            VorlageId = new Guid("0d54c3d1-7f28-4e3e-a8be-02f6e9e37f2a")
+                        },
+                        new
+                        {
+                            Id = new Guid("4e661d63-7060-4709-ad20-c8bcbf9e247d"),
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Pflicht = false,
+                            PruefverfahrenId = new Guid("d4f5389d-2195-4e1b-9568-7f7d4f7fdedd"),
+                            Reihenfolge = 2,
+                            VorlageId = new Guid("0d54c3d1-7f28-4e3e-a8be-02f6e9e37f2a")
+                        });
+                });
+
             modelBuilder.Entity("BLE.Domain.Entities.Pruefverfahren", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("Aktiv")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Beschreibung")
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Code")
                         .IsRequired()
+                        .HasMaxLength(20)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.Property<Guid>("NormwerkId")
@@ -515,6 +927,7 @@ namespace BLE.Data.Migrations
 
                     b.Property<string>("Titel")
                         .IsRequired()
+                        .HasMaxLength(120)
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime?>("UpdatedAt")
@@ -522,7 +935,72 @@ namespace BLE.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Pruefverfahren");
+                    b.HasIndex("Code")
+                        .IsUnique();
+
+                    b.ToTable("Pruefverfahren", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("36a8607f-92d3-4d9c-b6d5-2db8a6355409"),
+                            Aktiv = true,
+                            Code = "SIEB",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Siebanalyse",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Siebanalyse"
+                        },
+                        new
+                        {
+                            Id = new Guid("d4f5389d-2195-4e1b-9568-7f7d4f7fdedd"),
+                            Aktiv = true,
+                            Code = "KORN",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Kornform",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Kornform"
+                        },
+                        new
+                        {
+                            Id = new Guid("9adf7c86-409b-46f0-957b-0d9c4b7b64f0"),
+                            Aktiv = true,
+                            Code = "SAE",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Siebäquivalent",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Siebäquivalent"
+                        },
+                        new
+                        {
+                            Id = new Guid("a6c0c49c-3f3c-4f66-a4b6-9efc0266f9b9"),
+                            Aktiv = true,
+                            Code = "KOCH",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Kochversuch",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Kochversuch"
+                        },
+                        new
+                        {
+                            Id = new Guid("8b66f6d4-3d6f-478a-bf42-4cf2f5a9a0e2"),
+                            Aktiv = true,
+                            Code = "BIND",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Bindemittelgehalt",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Bindemittelgehalt"
+                        },
+                        new
+                        {
+                            Id = new Guid("32ad7066-76a4-4b53-8387-49753d1953a8"),
+                            Aktiv = true,
+                            Code = "FROST",
+                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Name = "Frost/Tausalz",
+                            NormwerkId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Titel = "Frost/Tausalz"
+                        });
                 });
 
             modelBuilder.Entity("BLE.Domain.Entities.StsErgebnis", b =>
@@ -678,6 +1156,31 @@ namespace BLE.Data.Migrations
                         });
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.Werk", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("TEXT");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
+
+                    b.ToTable("Workspace_Werk", (string)null);
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole<System.Guid>", b =>
                 {
                     b.Property<Guid>("Id")
@@ -804,6 +1307,103 @@ namespace BLE.Data.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.Probe", b =>
+                {
+                    b.HasOne("BLE.Domain.Entities.Materialtyp", "WorkspaceMaterialtyp")
+                        .WithMany("Proben")
+                        .HasForeignKey("MaterialtypId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("BLE.Domain.Entities.Produkt", "WorkspaceProdukt")
+                        .WithMany("Proben")
+                        .HasForeignKey("ProduktId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("BLE.Domain.Entities.Werk", "WorkspaceWerk")
+                        .WithMany("Proben")
+                        .HasForeignKey("WerkId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("WorkspaceMaterialtyp");
+
+                    b.Navigation("WorkspaceProdukt");
+
+                    b.Navigation("WorkspaceWerk");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Produkt", b =>
+                {
+                    b.HasOne("BLE.Domain.Entities.Werk", "Werk")
+                        .WithMany("Produkte")
+                        .HasForeignKey("WerkId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Werk");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Pruefauftrag", b =>
+                {
+                    b.HasOne("BLE.Domain.Entities.Probe", "Probe")
+                        .WithMany("Pruefauftraege")
+                        .HasForeignKey("ProbeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BLE.Domain.Entities.Pruefverfahren", "Pruefverfahren")
+                        .WithMany("Pruefauftraege")
+                        .HasForeignKey("PruefverfahrenId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Probe");
+
+                    b.Navigation("Pruefverfahren");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.PruefplanVorlage", b =>
+                {
+                    b.HasOne("BLE.Domain.Entities.Materialtyp", "Materialtyp")
+                        .WithMany("PruefplanVorlagen")
+                        .HasForeignKey("MaterialtypId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("BLE.Domain.Entities.Produkt", "Produkt")
+                        .WithMany("PruefplanVorlagen")
+                        .HasForeignKey("ProduktId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("BLE.Domain.Entities.Werk", "Werk")
+                        .WithMany("PruefplanVorlagen")
+                        .HasForeignKey("WerkId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Materialtyp");
+
+                    b.Navigation("Produkt");
+
+                    b.Navigation("Werk");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.PruefplanVorlageItem", b =>
+                {
+                    b.HasOne("BLE.Domain.Entities.Pruefverfahren", "Pruefverfahren")
+                        .WithMany("VorlageItems")
+                        .HasForeignKey("PruefverfahrenId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("BLE.Domain.Entities.PruefplanVorlage", "Vorlage")
+                        .WithMany("Items")
+                        .HasForeignKey("VorlageId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Pruefverfahren");
+
+                    b.Navigation("Vorlage");
+                });
+
             modelBuilder.Entity("BLE.Domain.Entities.StsErgebnis", b =>
                 {
                     b.HasOne("BLE.Domain.Entities.StsTest", "StsTest")
@@ -899,6 +1499,37 @@ namespace BLE.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("BLE.Domain.Entities.Materialtyp", b =>
+                {
+                    b.Navigation("Proben");
+
+                    b.Navigation("PruefplanVorlagen");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Probe", b =>
+                {
+                    b.Navigation("Pruefauftraege");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Produkt", b =>
+                {
+                    b.Navigation("Proben");
+
+                    b.Navigation("PruefplanVorlagen");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.PruefplanVorlage", b =>
+                {
+                    b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Pruefverfahren", b =>
+                {
+                    b.Navigation("Pruefauftraege");
+
+                    b.Navigation("VorlageItems");
+                });
+
             modelBuilder.Entity("BLE.Domain.Entities.StsTest", b =>
                 {
                     b.Navigation("Ergebnis");
@@ -908,6 +1539,15 @@ namespace BLE.Data.Migrations
                     b.Navigation("Kornform");
 
                     b.Navigation("Siebanalysen");
+                });
+
+            modelBuilder.Entity("BLE.Domain.Entities.Werk", b =>
+                {
+                    b.Navigation("Proben");
+
+                    b.Navigation("Produkte");
+
+                    b.Navigation("PruefplanVorlagen");
                 });
 #pragma warning restore 612, 618
         }
